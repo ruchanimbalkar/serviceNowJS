@@ -27,3 +27,7 @@ gs.info(num % secondNum);
 
 var c = (5 + 4) * 2;
 gs.info(c); //18
+
+gs.info(3 + 2 * 5); //13
+
+gs.info((3 + 2) * 5); //25
