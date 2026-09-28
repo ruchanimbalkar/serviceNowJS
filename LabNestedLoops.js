@@ -9,3 +9,12 @@ for (var i = 1; i < 6; i++) {
   }
   gs.info("Four members added to team " + i);
 }
+
+//Assignment:Using Nested Loops, create 5 teams of 4 people and assign them unique ids | Teacher's solution
+var id = 1;
+for (var team = 1; team <= 5; team++) {
+  for (var person = 1; person <= 4; person++) {
+    gs.info("team=" + team + "person=" + person + "id=" + id);
+    ++id;
+  }
+}
