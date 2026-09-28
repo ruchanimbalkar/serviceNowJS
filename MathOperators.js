@@ -1,3 +1,6 @@
+//
+// Mathematical operators
+//
 var num = 12;
 var secondNum = 13;
 // num = num + 2
