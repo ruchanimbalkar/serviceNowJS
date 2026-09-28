@@ -23,3 +23,28 @@ switch (language) {
   default:
     gs.info(message);
 }
+
+//Lab 4 Assignment: Use a Switch Statement to translate a string to multiple languages Teacher's solution :
+
+var fromString = "Hello, World!";
+var language = "Spanish";
+var translatedStr = "";
+
+switch (language) {
+  case "Spanish":
+    translatedStr = "Hola, Mundo!";
+    break;
+
+  case "French":
+    translatedStr = "Bonjour, le monde!";
+    break;
+
+  case "German":
+    translatedStr = "Hallo, Welt!";
+    break;
+
+  default:
+    translatedStr = fromString;
+}
+
+gs.info(fromString + " in " + language + " ===> " + translatedStr);
