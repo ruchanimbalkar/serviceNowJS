@@ -49,3 +49,23 @@ while (!done) {
   done = true;
 }
 gs.info(i);
+
+//
+// For loop
+//
+// Note: break and continue work here too!
+for (var i = 0; i < 5; i++) {
+  gs.info(i);
+}
+gs.info("done i=" + i);
+
+//
+// do-while
+//
+var i = 0;
+gs.info("start");
+do {
+  gs.info("i=" + i);
+  ++i;
+} while (i < 5);
+gs.info("done i=" + i);

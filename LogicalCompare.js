@@ -17,3 +17,9 @@ else if (a == b) gs.info("a equals b");
 else gs.info("Uh-oh");
 
 if (a < b) if (b < c) gs.info("a b c are in order");
+
+//Using AND && operator
+if (a < b && b < c) gs.info("a b c are in order");
+
+// OR || operator
+if (b > a || b > c) gs.info("b is greater than one of them");
