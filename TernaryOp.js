@@ -1,4 +1,3 @@
-//
 // The ternary operator
 //
 // Could have written...
