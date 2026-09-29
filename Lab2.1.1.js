@@ -27,7 +27,6 @@ if (temperature < desiredTemperature && homeIsOccupied && !heaterIsOn) {
 
   /* temperature is greater than desiredTemperature and heater is on and home is occupied*/
 } else if (temperature > desiredTemperature && heaterIsOn && homeIsOccupied) {
-  heaterIsOn = false;
   gs.info("Turning off the heat!");
 
   /* home is not occupied */
@@ -42,17 +41,31 @@ if (temperature < desiredTemperature && homeIsOccupied && !heaterIsOn) {
  *    * change the temperature to 75 and the heaterIsOn to true and test the results
  *    * Change homeIsOccupied to false and test the results
  */
+
 temperature = 75;
 heaterIsOn = true;
-homeIsOccupied = false;
-gs.info("Experimenting with new values to test my work");
+/* temperature is less than desiredTemperature and home is occupied and heater is off */
 if (temperature < desiredTemperature && homeIsOccupied && !heaterIsOn) {
   heaterIsOn = true;
   gs.info("Turning on the heat!");
 
   /* temperature is greater than desiredTemperature and heater is on and home is occupied*/
 } else if (temperature > desiredTemperature && heaterIsOn && homeIsOccupied) {
-  heaterIsOn = false;
+  gs.info("Turning off the heat!");
+
+  /* home is not occupied */
+} else if (!homeIsOccupied) {
+  gs.info("No action needed");
+}
+
+homeIsOccupied = false;
+/* temperature is less than desiredTemperature and home is occupied and heater is off */
+if (temperature < desiredTemperature && homeIsOccupied && !heaterIsOn) {
+  heaterIsOn = true;
+  gs.info("Turning on the heat!");
+
+  /* temperature is greater than desiredTemperature and heater is on and home is occupied*/
+} else if (temperature > desiredTemperature && heaterIsOn && homeIsOccupied) {
   gs.info("Turning off the heat!");
 
   /* home is not occupied */
