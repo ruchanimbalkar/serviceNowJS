@@ -117,14 +117,28 @@ function printAverageMileage() {
 printAverageMileage();
 
 // REPLACE THIS COMMENT WITH YOUR CODE
+// function printMaxMileage() {
+//   var maxMileage = 0;
+//   cars.forEach((car) => {
+//     if (maxMileage < car.mileage) {
+//       maxMileage = car.mileage;
+//     }
+//   });
+//   gs.info("Max Mileage = " + maxMileage);
+// }
+
+// printMaxMileage();
+
+// Using Math.max
 function printMaxMileage() {
-  var maxMileage = 0;
+  var mileageArray = new Array();
   cars.forEach((car) => {
-    if (maxMileage < car.mileage) {
-      maxMileage = car.mileage;
-    }
+    mileageArray.push(car.mileage);
   });
-  gs.info("Max Mileage = " + maxMileage);
+  // Use apply() for older JS engines in ServiceNow
+  var maxValue = Math.max.apply(null, mileageArray);
+
+  gs.info("Max Mileage= " + maxValue); // Output: 29
 }
 
 printMaxMileage();

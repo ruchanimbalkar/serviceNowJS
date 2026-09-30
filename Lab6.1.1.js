@@ -28,7 +28,7 @@
 
 function sumArray(numbers) {
   var sum = 0;
-  numbers.forEach((element) => (sum += element));
+  numbers.forEach((number) => (sum += number));
   return sum;
 }
 
