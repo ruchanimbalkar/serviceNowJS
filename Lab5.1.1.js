@@ -42,16 +42,19 @@
  */
 function splitTheCheck(billAmount, numberOfPeople) {
   try {
-    if (numberOfPeople <= 0) {
-      throw new Error("the number of people must be greater than zero");
+    if (numberOfPeople <= 0 || isNaN(numberOfPeople)) {
+      throw new Error("Number of people should be a number greater than 0");
+      //Return default value
+    } else {
+      return billAmount / numberOfPeople;
     }
-    if (isNaN(numberOfPeople)) {
-      throw new Error("the number of people must be a number");
-    }
-    return billAmount / numberOfPeople;
-  } catch (error) {
-    gs.info("the number of people must be a number greater than zero");
+  } catch (e) {
+    gs.error(
+      "Oh No! Did you enter a number greater than zero? Error : " + e.message
+    );
   }
+
+  return 0;
 }
 
 var total = 317;
@@ -68,10 +71,12 @@ gs.info(
 
 // Test your work by running the script with other values
 // for guests such as negative numbers and strings
+gs.info("Test cases : ");
+gs.info("Test Case 1: Number of guests is a negative number ");
 
-total = 300;
-guests = 0;
-
+//negative # of guests
+total = 200;
+guests = -12;
 gs.info(
   "Total=" +
     total.toFixed(2) +
@@ -81,9 +86,23 @@ gs.info(
     splitTheCheck(total, guests).toFixed(2)
 );
 
+//zero guests
+gs.info("Test Case 2: Number of guests is zero ");
 total = 100;
-guests = -3;
+guests = 0;
+gs.info(
+  "Total=" +
+    total.toFixed(2) +
+    " guests=" +
+    guests +
+    " each guest owes: " +
+    splitTheCheck(total, guests).toFixed(2)
+);
 
+//Non-numeric value like "abc"
+gs.info("Test Case 3: Number of guests is not a number");
+total = 100;
+guests = "abc";
 gs.info(
   "Total=" +
     total.toFixed(2) +

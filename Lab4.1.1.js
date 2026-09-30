@@ -14,7 +14,7 @@ function calculateSimpleInterest(principalAmount, rateOfInterest, timeInYears) {
   // Calculate the interest using the formula above
   var interest = principalAmount * rateOfInterest * timeInYears;
 
-  // REPLACE THIS COMMENT WITH YOUR CODE TO RETURN THE INTEREST TO THE CALLER
+  //RETURN THE INTEREST TO THE CALLER
   return interest;
 }
 
