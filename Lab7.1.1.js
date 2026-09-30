@@ -82,28 +82,28 @@ var cars = [
   },
 ];
 
-function averageMileage() {
-  var sumOfMileages = 0;
-  for (var i = 0; i < cars.length; i++) {
-    sumOfMileages += cars[i].mileage;
-  }
-  var average = sumOfMileages / cars.length;
-  return average;
-}
+// function averageMileage() {
+//   var sumOfMileages = 0;
+//   for (var i = 0; i < cars.length; i++) {
+//     sumOfMileages += cars[i].mileage;
+//   }
+//   var average = sumOfMileages / cars.length;
+//   return average;
+// }
 
-gs.info("Average mileage is " + averageMileage());
+// gs.info("Average mileage is " + averageMileage());
 
-function maxMileage() {
-  var maxValue = cars[0].mileage;
-  for (var i = 0; i < cars.length; i++) {
-    if (maxValue < cars[i].mileage) {
-      maxValue = cars[i].mileage;
-    }
-  }
-  return maxValue;
-}
+// function maxMileage() {
+//   var maxValue = cars[0].mileage;
+//   for (var i = 0; i < cars.length; i++) {
+//     if (maxValue < cars[i].mileage) {
+//       maxValue = cars[i].mileage;
+//     }
+//   }
+//   return maxValue;
+// }
 
-gs.info("Highest mileage is " + maxMileage());
+// gs.info("Highest mileage is " + maxMileage());
 
 //Using forEach:
 
