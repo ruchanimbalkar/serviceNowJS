@@ -8,17 +8,6 @@ var person = {
 gs.info("person = " + person.firstName + " " + person.lastName);
 // gs.info("person address = " + person.address); // Error because address property does not exist in person
 
-//Looping through the keys:
-//Access all keys in the object
-var book = {
-  title: "Harry Potter and the Chamber of Secrets",
-  author: "J. K. Rowling",
-};
-
-for (var key in book) {
-  gs.info("key = " + key + "value = " + book[key]);
-}
-
 //Check if a property exists
 var newPerson = {
   firstName: "Chikoo",
@@ -45,3 +34,22 @@ if (newPerson.hasOwnProperty("address")) {
 } else {
   gs.warn("warning: No address for this person ");
 }
+
+//Looping through the keys:
+//Access all keys in the object
+var book = {
+  title: "Harry Potter and the Chamber of Secrets",
+  author: "J. K. Rowling",
+};
+
+for (var key in book) {
+  gs.info("key = " + key + " value = " + book[key]);
+}
+
+//Display the text representation of an object
+var bookStr = JSON.stringify(book);
+gs.info(bookStr);
+
+//Display the text representation of an object with newlines and indentation
+var formattedBookStr = JSON.stringify(book, null, 4);
+gs.info(formattedBookStr);
