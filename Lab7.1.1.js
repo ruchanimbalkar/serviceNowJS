@@ -104,3 +104,24 @@ function maxMileage() {
 }
 
 gs.info("Highest mileage is " + maxMileage());
+
+//Using forEach:
+
+//Average Mileage
+function printAverageMileage() {
+  var totalMileage = 0;
+  cars.forEach((car) => (totalMileage += car.mileage));
+  gs.info("Average Mileage = " + totalMileage / cars.length);
+}
+
+printAverageMileage();
+
+// REPLACE THIS COMMENT WITH YOUR CODE
+function printMaxMileage() {
+  var mileageArray = new Array();
+  cars.forEach((car) => mileageArray.push(car.mileage));
+  gs.info("Max Mileage = " + mileageArray);
+  // console.log(Math.max(...mileageArray));
+}
+
+printMaxMileage();

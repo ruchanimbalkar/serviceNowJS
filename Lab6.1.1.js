@@ -16,11 +16,19 @@
  *   HINT: You can create an array of arrays.
  */
 
+// function sumArray(numbers) {
+//   var sum = 0;
+//   for (var i = 0; i < numbers.length; i++) {
+//     sum += numbers[i];
+//   }
+//   return sum;
+// }
+
+//Using forEach
+
 function sumArray(numbers) {
   var sum = 0;
-  for (var i = 0; i < numbers.length; i++) {
-    sum += numbers[i];
-  }
+  numbers.forEach((element) => (sum += element));
   return sum;
 }
 
