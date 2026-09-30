@@ -118,10 +118,13 @@ printAverageMileage();
 
 // REPLACE THIS COMMENT WITH YOUR CODE
 function printMaxMileage() {
-  var mileageArray = new Array();
-  cars.forEach((car) => mileageArray.push(car.mileage));
-  gs.info("Max Mileage = " + mileageArray);
-  // console.log(Math.max(...mileageArray));
+  var maxMileage = 0;
+  cars.forEach((car) => {
+    if (maxMileage < car.mileage) {
+      maxMileage = car.mileage;
+    }
+  });
+  gs.info("Max Mileage = " + maxMileage);
 }
 
 printMaxMileage();
